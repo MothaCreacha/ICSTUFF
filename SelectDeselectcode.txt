@@ -1,0 +1,90 @@
+This code selects elements on click
+-----------------------------------------------------------------------
+$(".#").click(function() {
+    $(this).addClass("highlight");
+});
+
+[.#] is whatever class you assigned the divs
+"Highlight" needs a css with it.
+
+.highlight{
+	border:solid yellow;
+}
+
+http://jsfiddle.net/K79AB/2/
+-----------------------------------------------------------------------
+     
+This code selects and deselects elements on click
+_______________________________________________________________________
+
+$(".#").click(function() {
+    if ($(this).hasClass('highlight')) {
+	$(this).removeClass('highlight');
+} else {
+	$(this).addClass('highlight');
+  }
+   });
+
+CSS
+
+.highlight{
+    border: solid yellow;
+}
+_______________________________________________________________________
+This code makes the select/deselect code work on load.
+-----------------------------------------------------------------------
+$(window).load(function(){
+$(".anitem").click(function() {
+    if ($(this).hasClass('highlight')) {
+	$(this).removeClass('highlight');
+} else {
+	$(this).addClass('highlight');
+  }
+   });
+
+});
+_______________________________________________________________________
+This code hides the move button
+-----------------------------------------------------------------------
+$(document).ready(function() {
+    $("#move").hide();
+});
+
+_______________________________________________________________________
+This code makes the move button show itself when a railcar div is selected and hide when there are no divs selected
+-----------------------------------------------------------------------
+$(window).load(function() {
+   $(".button").click(function() {
+    if ($(".button").hasClass('highlight')) {
+    $("#move").show();
+  } else {
+    $("#move").hide();
+  }
+});
+});
+_______________________________________________________________________
+All together
+-----------------------------------------------------------------------
+$(document).ready(function() {
+    $("#move").hide();
+});
+
+ $(window).load(function(){
+  $(".button").click(function() {
+    if ($(this).hasClass('highlight')) {
+    $(this).removeClass('highlight');
+    } else {
+    $(this).addClass('highlight');
+    }
+  });
+});
+
+  $(window).load(function() {
+   $(".button").click(function() {
+    if ($(".button").hasClass('highlight')) {
+    $("#move").show();
+  } else {
+    $("#move").hide();
+  }
+});
+});
