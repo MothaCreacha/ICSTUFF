@@ -25,6 +25,16 @@ $(".#").click(function() {
   }
    });
 
+
+ALTERNATIVE METHOD
+$(document).ready(function() {
+  $('.button').click(function() {
+    $(this).toggleClass('highlight')
+  });
+});
+
+
+BOTH METHODS NEED THE CSS BELOW
 CSS
 
 .highlight{
@@ -38,6 +48,7 @@ $(".anitem").click(function() {
     if ($(this).hasClass('highlight')) {
 	$(this).removeClass('highlight');
 } else {
+	
 	$(this).addClass('highlight');
   }
    });
@@ -79,6 +90,13 @@ $(document).ready(function() {
   });
 });
 
+ALTERNATIVE METHOD
+$(document).ready(function() {
+  $('.button').click(function() {
+    $(this).toggleClass('highlight')
+  });
+});
+
   $(window).load(function() {
    $(".button").click(function() {
     if ($(".button").hasClass('highlight')) {
@@ -88,3 +106,29 @@ $(document).ready(function() {
   }
 });
 });
+_______________________________________________________________________
+Confirmation box links
+-----------------------------------------------------------------------
+http://stackoverflow.com/questions/17648522/custom-alert-and-confirm-box-in-jquery
+
+http://tutorialzine.com/2010/12/better-confirm-box-jquery-css3/
+
+http://myclabs.github.io/jquery.confirm/
+
+
+_______________________________________________________________________
+Track highlight feature
+-----------------------------------------------------------------------
+$(document).ready(function () {
+    $("#move").click(function () {
+        $(".track").addClass('foo');
+    });
+});
+
+$(document).ready(function () {
+    $("#move").click(function () {
+        $(".button").removeClass('foo');
+    });
+});
+_______________________________________________________________________
+

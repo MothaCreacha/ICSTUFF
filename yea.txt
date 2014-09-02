@@ -1,0 +1,76 @@
+(document).ready (function(){
+  
+  var server = new ajaxServiceLayer();
+  var tracksFromJSON = server.gettracks();
+  console.log(tracksFromJSON.yards);
+  for (t=0;t<tracksFromJSON.yards.tracks.length;t++){  
+    thegame.addtrack(tracksFromJSON.yards.tracks[t]);{
+     for (b=0;b<tracksFromJSON.yards.tracks[t].trackbutton.length;b++){
+      thegame.addunit(tracksFromJSON.yards.tracks[t].trackbutton[b]);	
+       for (u=0;u<tracksFromJSON.yards.tracks[t].trackbutton.units.length;u++){
+        thegame.addunit(tracksFromJSON.yards.tracks[t].trackbutton[b].units[u]);
+	}
+      }
+    }
+  };
+  thegame.addyard(tracksFromJSON.yards);
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+One of 12-interns selected, among hundreds of applicants, to participate in a project based, full-immersion IT/business training program that is designed to develop 1,000 community leaders by the year 2020. Participants engage in three client projects over the 16-week (1000+ hour) internship, developing leadership qualities, business and technology skills, and community awareness. Strong team skills and real life client interaction differentiate i.c.stars alumni, preparing them to make an immediate impact on leading IT organizations upon graduation.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
